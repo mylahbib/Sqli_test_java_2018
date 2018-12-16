@@ -18,17 +18,14 @@ pipeline {
 
         stage ('Build') {
             steps {
-                    bat 'cd NumberGenerator & mvn install'
-            }
-             post {
-                success {
-                    junit 'NumberGenerator/target/surefire-reports/*.xml'
-                        }
-                 }
-               
-
-           
-            }
+                    bat 'cd cloudinfrastructure & mvn install'
+            }              
+         }
+         stage ('test') {
+            steps {
+                    bat 'cd cloudinfrastructure & java -jar src\test\java\ma\sqli\tests\cloudinfrastructure'
+            }              
+         }
         }
     
 }
