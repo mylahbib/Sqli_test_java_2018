@@ -23,7 +23,7 @@ pipeline {
          }
          stage ('test') {
             steps {
-                    bat 'cd cloudinfrastructure & java -jar src\test\java\ma\sqli\tests\cloudinfrastructure'
+                    bat 'cd cloudinfrastructure & java -jar src/test/java/ma/sqli/ests/cloudinfrastructure'
             }              
          }
         }
