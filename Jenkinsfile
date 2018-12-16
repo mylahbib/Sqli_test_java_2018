@@ -23,7 +23,8 @@ pipeline {
          }
          stage ('test') {
             steps {
-                    bat 'cd cloudinfrastructure &  junit '**/target/*.xml''
+                    bat 'cd cloudinfrastructure  '
+                 junit '**/target/*.xml'
             }              
          }
         }
