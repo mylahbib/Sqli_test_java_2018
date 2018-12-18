@@ -35,10 +35,6 @@ pipeline {
             steps {
                     echo  'deployement....'
             } 
-            post {
-               failure {
-                 mail : 'youssefmylahbib@gmail.com' , subject: 'The Pipeline success :)'
-            }
         }
          }
         
