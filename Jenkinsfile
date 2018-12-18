@@ -27,8 +27,7 @@ pipeline {
             } 
              post {
                  success {
-                  cd 'cloudinfrastructure'
-                 junit 'target/**/*.xml'
+                 junit 'cloudinfrastructure/target/**/*.xml'
                  }
              }
          }
