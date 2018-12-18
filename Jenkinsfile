@@ -35,7 +35,9 @@ pipeline {
             steps {
                     echo  'deployement....'
             } 
-            success {
+          
+            post {
+                 success {
                 emailext body: 'A Test EMail', recipientProviders: [[$class: 'DevelopersRecipientProvider'], 
                                                                     [$class: 'RequesterRecipientProvider']], subject: 'Test'
         }
