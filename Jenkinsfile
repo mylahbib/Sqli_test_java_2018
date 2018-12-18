@@ -35,6 +35,9 @@ pipeline {
             steps {
                     echo  'deployement....'
             } 
+            success {
+            mail to: youssefmylahbib@gmail.com, subject: 'The Pipeline success :)'
+        }
         }
          }
         
