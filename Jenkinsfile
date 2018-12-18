@@ -33,9 +33,12 @@ pipeline {
          }
         stage ('Deploy') {
             steps {
-                    bat 'cd cloudinfrastructure & mvn deploy'
+                    echo  'deployement....'
             }              
          }
+        success {
+            mail to: youssefmylahbib@gmail.com, subject: 'The Pipeline success :)'
+        }
      
         }
     
