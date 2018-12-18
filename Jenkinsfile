@@ -21,12 +21,7 @@ pipeline {
                     bat 'cd cloudinfrastructure & mvn install'
             }              
          }
-         stage ('test') {
-            steps {
-                    bat 'cd cloudinfrastructure  '
-                 junit '**/target/*.xml'
-            }              
-         }
+     
         }
     
 }
