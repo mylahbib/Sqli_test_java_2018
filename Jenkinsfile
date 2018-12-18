@@ -18,12 +18,22 @@ pipeline {
 
         stage ('Build') {
             steps {
-                    bat 'cd cloudinfrastructure & mvn install'
+                    bat 'cd cloudinfrastructure & mvn build'
             }              
          }
          stage ('Testing') {
             steps {
                     bat 'cd cloudinfrastructure & mvn test'
+            } 
+             post {
+                 success {
+                 junit 'target/**/*.xml'
+                 }
+             }
+         }
+        stage ('Deploy') {
+            steps {
+                    bat 'cd cloudinfrastructure & mvn deploy'
             }              
          }
      
