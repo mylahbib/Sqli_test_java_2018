@@ -37,7 +37,7 @@ pipeline {
             } 
             post {
                failure {
-                 mail to: youssefmylahbib@gmail.com, subject: 'The Pipeline success :)'
+                 mail : youssefmylahbib@gmail.com, subject: 'The Pipeline success :)'
             }
         }
          }
