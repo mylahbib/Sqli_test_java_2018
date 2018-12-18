@@ -18,7 +18,7 @@ pipeline {
 
         stage ('Build') {
             steps {
-                    bat 'cd cloudinfrastructure & mvn build'
+                    bat 'cd cloudinfrastructure & mvn install'
             }              
          }
          stage ('Testing') {
