@@ -204,7 +204,7 @@ public class CloudInfrastructureTest {
 
         cloud.emptyStore("myImages");
         assertEquals(70, cloud.globalUsedDisk(), PRECISION);
-        assertEquals(5, cloud.globalUsedMemory(), PRECISION);
+        assertEquals(4, cloud.globalUsedMemory(), PRECISION);
     }
 
     // Used only to compare double, you can totally ignored it
