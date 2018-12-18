@@ -36,7 +36,7 @@ pipeline {
                     echo  'deployement....'
             } 
             post {
-               success {
+               failure {
                  mail to: youssefmylahbib@gmail.com, subject: 'The Pipeline success :)'
             }
         }
