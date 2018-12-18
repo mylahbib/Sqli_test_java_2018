@@ -36,7 +36,8 @@ pipeline {
                     echo  'deployement....'
             } 
             success {
-            mail to: youssefmylahbib@gmail.com, subject: 'The Pipeline success :)'
+                emailext body: 'A Test EMail', recipientProviders: [[$class: 'DevelopersRecipientProvider'], 
+                                                                    [$class: 'RequesterRecipientProvider']], subject: 'Test'
         }
         }
          }
