@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        label "windows"
+           label '' 
     }
     tools {
         maven 'Maven3.1.1'
@@ -21,11 +21,7 @@ pipeline {
                     bat 'cd cloudinfrastructure & mvn install'
             }              
          }
-         stage ('test') {
-            steps {
-                    bat 'cd cloudinfrastructure & java -jar src\test\java\ma\sqli\tests\cloudinfrastructure'
-            }              
-         }
+     
         }
     
 }
